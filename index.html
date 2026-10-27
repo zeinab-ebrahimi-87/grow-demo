@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <meta name="description" content="GROW — نسخه نمایشی رایگان برنامه‌ریز اهداف، عادت‌ها و برنامه روزانه">
+  <title>GROW | رشد روزانه</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="#" data-page="dashboard"><span class="brand-mark">G</span><span><b>GROW</b><small>هر روز، یک قدم جلوتر</small></span></a>
+    <div class="profile-mini"><div class="avatar">ر</div><div><b>کاربر نمایشی</b><small>نسخه دمو · ذخیره در همین مرورگر</small></div></div>
+    <nav class="nav">
+      <button class="nav-link active" data-page="dashboard"><span>◫</span> نمای کلی</button>
+      <button class="nav-link" data-page="goals"><span>◎</span> اهداف من <em id="goalCount">0</em></button>
+      <button class="nav-link" data-page="plans"><span>▦</span> برنامه روزانه</button>
+      <button class="nav-link" data-page="habits"><span>✓</span> چک‌لیست‌ها</button>
+      <button class="nav-link" data-page="review"><span>✎</span> مرور روزانه</button>
+      <button class="nav-link" data-page="insights"><span>✧</span> پیشنهادها و تحلیل</button>
+    </nav>
+    <div class="sidebar-bottom"><div class="demo-note"><span>✦</span><div><b>نسخه نمایشی</b><p>اطلاعات فقط در مرورگر شما ذخیره می‌شود؛ بک‌اند و حساب کاربری فعال نیست.</p></div></div><button class="text-button" id="resetDemo">↻ بازگردانی داده‌های نمونه</button></div>
+  </aside>
+  <main class="main">
+    <header class="topbar"><button class="icon-btn mobile-menu" id="mobileMenu" aria-label="باز کردن منو">☰</button><div class="breadcrumb"><span>فضای شخصی</span><b>/</b><strong id="pageTitle">نمای کلی</strong></div><div class="top-actions"><span class="today-chip" id="todayLabel"></span><button class="icon-btn" id="themeToggle" aria-label="تغییر تم">◐</button><button class="avatar small">ر</button></div></header>
+    <section class="page-content">
+      <div class="welcome-row"><div><p class="eyebrow">فضای رشد تو</p><h1 id="welcomeTitle">سلام، آماده‌ای امروز رو بسازی؟ <span>✦</span></h1><p class="muted" id="welcomeSub">پیشرفت‌های کوچک، در طول زمان تفاوت‌های بزرگ می‌سازند.</p></div><button class="primary-btn" id="quickAdd">＋ افزودن هدف جدید</button></div>
+      <div id="pageView"></div>
+      <footer>GROW Demo <span>•</span> نسخه استاتیک برای GitHub Pages <span>•</span> داده‌ها روی همین دستگاه ذخیره می‌شوند.</footer>
+    </section>
+  </main>
+</div>
+<div class="modal-backdrop" id="modalBackdrop" hidden><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-head"><h2 id="modalTitle">افزودن</h2><button class="icon-btn" id="closeModal" aria-label="بستن">×</button></div><form id="itemForm"><div id="modalFields"></div><div class="modal-actions"><button type="button" class="secondary-btn" id="cancelModal">انصراف</button><button type="submit" class="primary-btn">ذخیره</button></div></form></section></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="assets/app.js"></script>
+</body></html>
